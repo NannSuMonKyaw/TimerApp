@@ -56,7 +56,7 @@ public class TimerService extends Service {
             }
         };
         timer.start();
-        Toast.makeText(this, "Service Started", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Service Started", Toast.LENGTH_SHORT).show();
         Log.e(TAG, "onStartCommand: " );
         return START_STICKY;
 
@@ -68,7 +68,7 @@ public class TimerService extends Service {
         super.onDestroy();
         Log.e(TAG, "onDestroy: " );
         IS_SERVICE_RUNNING = false;
-        Toast.makeText(this, "Service Stopped", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Service Stopped", Toast.LENGTH_SHORT).show();
         timer.cancel();
 
     }
